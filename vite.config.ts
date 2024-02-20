@@ -1,3 +1,3 @@
 export default {
-    Base:'/jsjunki/'
+    base:'/jsjunki/'
 }
