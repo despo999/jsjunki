@@ -403,3 +403,89 @@ import './style.css'
 // }
 // console.log(getSumRest(1,2,43,55))
 
+// function powRecursive(x:number, n:number) {
+//   return n == 1 ? x : x * powRecursive(x, n - 1);
+// if (n==1){
+//     console.log('Условие выхода сработало')
+//     return x
+// }else{
+//     console.log(n,x)
+// }
+// }
+// console.log(powRecursive(7,6))
+
+//practice 5
+
+// 1
+// Написать функцию, которая вычисляет факториал задан-
+// ного числа.
+
+// function getFucktorial(n:number):number{
+//     if(n==1){
+//         return n
+//     }else{
+//         return n * getFucktorial(n-1)
+//     }
+
+// }
+// console.log(getFucktorial(7))
+
+// 2
+// Написать функцию, которая выводит все числа из заданного
+// пользователем диапазона в прямом порядке. И еще одну
+// функцию – для вывода в обратном порядке.
+
+// function getStripeOfRawNumbers (start:number,end:number):void{
+//     if(start > end){
+//         return
+//     }
+ 
+//     console.log (start)
+//     getStripeOfRawNumbers(start+1,end)
+// }
+// getStripeOfRawNumbers(1,5)
+
+// 3
+// Написать функцию, которая выводит переданное ей число
+// задом наперед.
+// Например: число 1234 вывести как 4321
+
+
+// function getReverseNumber ( n: number):number {
+//     if(n < 10){
+//      return n
+//     }else{
+//         return + (n % 10 + '' + getReverseNumber(Math.floor(n/10)))
+//     }
+// }
+// console.log(getReverseNumber(1234))
+
+// 4
+// Написать функцию, которая считает сумму цифр числа.
+// Например: число 1357, сумма 1 + 3 + 5 + 7 = 16
+
+// function getSumOfDigits(n:number):number {
+//     if (n < 10){
+//         return n
+//     }else{
+//         return n % 10  + getSumOfDigits(Math.floor(n / 10))
+//     }
+// }
+
+// console.log(getSumOfDigits(1357))
+
+
+// 5
+// Написать функцию, которая принимает число и выводит
+// соответствующее количество вложенных пар круглых скобок.
+// Например: число 4 – (((()))).
+
+// function getBracketsPairsByNum (n:number):string{
+//     if (!n) {
+//         return '()'
+//     }else{
+//         return '(' + getBracketsPairsByNum(n-1) + ')'
+//     }
+// }
+
+// console.log(getBracketsPairsByNum(4))
