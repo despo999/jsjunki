@@ -489,3 +489,400 @@ import './style.css'
 // }
 
 // console.log(getBracketsPairsByNum(4))
+
+//практика 4 ФУНКЦИИ
+//задание1
+// Написать функцию, которая принимает 2 числа и возвра-
+// щает меньшее из них.
+// function getMin(a: number, b: number) {
+//     if (a < b) {
+//         return a
+//     }
+//     return b
+// }
+
+// console.log(getMin(3, 5))
+
+// задание 2
+// Написать функцию, которая возводит переданное число
+// в указанную степень.
+// function pow(x: number, n: number): number {
+//     if (n != 1) {
+//         return x *= pow(x, n - 1)
+//     } else {
+//         return x
+//     }
+// }
+// console.log((pow(2, 4)))
+
+
+
+// задание 3
+// Написать функцию, которая принимает 2 числа и знак
+// (+ - * /), считает пример и возвращает результат.
+// function getNum(figure1: number, figure2: number, arifmetica: string) {
+//     switch (arifmetica) {
+//         case '+':
+//             return figure1 + figure2
+//             break;
+//         case '-':
+//             return figure1 - figure2
+//             break;
+//         case '*':
+//             return figure1 * figure2
+//             break;
+//         case '/':
+//             return figure1 / figure2
+//             break;
+//         default:
+//             return 'ошибка'
+//     }
+// }
+
+// console.log(getNum(1, 5, '-'))
+
+// // задание 4
+// // Написать функцию, которая проверяет, является ли пере-
+// // данное ей число простым.
+// function getPrimeNum(a: number) {
+//     if (a == 0) {
+//         return false
+//     } else if (a === 2) {
+//         return ('простое')
+//     } else {
+//         for (var x = 2; x < a; x++) {
+//             if (a % x === 0) {
+//                 return ('не простое')
+//             }
+//         }
+//         return ('простое')
+//     }
+// }
+// console.log(getPrimeNum(5))
+
+// // задание 5
+// // Написать функцию, которая принимает число и выводит
+// // таблицу умножения для этого числа. Вызовите функцию
+// // для всех чисел от 2 до 9
+// function ShowTimesTableForNum(a: number) {
+//     if (a > 1 && a < 10) {
+//         return (`
+//         ${a}*2=${a * 2}  
+//         ${a}*3=${a * 3}  
+//         ${a}*4=${a * 4}  
+//         ${a}*5=${a * 5}  
+//         ${a}*6=${a * 6}  
+//         ${a}*7=${a * 7}  
+//         ${a}*8=${a * 8}  
+//         ${a}*9=${a * 9} 
+//         `)
+//     }
+//     return 'введите число от 2 до 9'
+// }
+
+// console.log(ShowTimesTableForNum(2))
+// console.log(ShowTimesTableForNum(3))
+// console.log(ShowTimesTableForNum(4))
+// console.log(ShowTimesTableForNum(5))
+// console.log(ShowTimesTableForNum(6))
+// console.log(ShowTimesTableForNum(7))
+// console.log(ShowTimesTableForNum(8))
+// console.log(ShowTimesTableForNum(9))
+// console.log(ShowTimesTableForNum(360))
+
+// задание 6
+// Написать функцию, которая реализует работу оператора %.
+// Функция принимает 2 параметра и возвращает остаток от
+// деления первого параметра на второй. В функции исполь-
+// зовать только + - * /, оператор % не использовать.
+// function getRemaiderOfNum(a: number, b: number) {
+//     return a - b * Math.floor(a / b)
+// }
+// console.log(getRemaiderOfNum(11, 3))
+
+// задание 7
+// Написать функцию, которая принимает от 1 до 5 чисел и
+// возвращает их сумму.
+// function sumNumbers(n1: number, n2 = 0, n3 = 0, n4 = 0, n5 = 0) {
+//     return n1 + n2 + n3 + n4 + n5
+// }
+// console.log(sumNumbers(8, 9, 7, 9, 8))
+
+
+
+//практика 5 РЕКУРСИИ
+// задание 1
+// Написать функцию, которая вычисляет факториал задан-
+// ного числа.
+// function getFactorialOfNum(n: number): number {
+//     if (n == 1) {
+//         return n
+//     } else {
+//         return n * getFactorialOfNum(n - 1)
+//     }
+// }
+// console.log(getFactorialOfNum(6))
+
+// задание 2
+// Написать функцию, которая выводит все числа из заданного
+// пользователем диапазона в прямом порядке. И еще одну
+// функцию – для вывода в обратном порядке.
+// function showAllNum(start: number, end: number): void {
+//     if (start > end) {
+//         return
+//     }
+//     console.log(start)
+//     showAllNum(start + 1, end)
+// }
+// showAllNum(1, 5)
+
+
+// function showAllNumBack(start: number, end: number): void {
+//     if (start < end) {
+//         return
+//     }
+//     console.log(start)
+//     showAllNumBack(start - 1, end)
+// }
+// showAllNumBack(5, 1)
+
+
+// задание 3
+// Написать функцию, которая выводит переданное ей число задом наперед.
+// Например: число 1234 вывести как 4321
+// function getReverseNum(n: number): number {
+//     if (n < 10) {
+//         return n
+//     } else {
+//         return + (n % 10 + '' + getReverseNum(Math.floor(n / 10)))
+//     }
+// }
+// console.log(getReverseNum(9849))
+
+// задание 4
+// Написать функцию, которая считает сумму цифр числа.
+// Например: число 1357, сумма 1 + 3 + 5 + 7 = 16
+// function getSumOfDigits(n: number): number {
+//     if (n < 10) {
+//         return n
+//     } else {
+//         return n % 10 + getSumOfDigits(Math.floor(n / 10))
+//     }
+// }
+// console.log(getSumOfDigits(344))
+
+// задание 5
+// Написать функцию, которая принимает число и выводит
+// соответствующее количество вложенных пар круглых скобок.
+// Например: число 4 – (((()))).
+// function getBracketsPairsByNum(n: number): string {
+//     if (!n) {
+//         return ''
+//     } else {
+//         return '(' + getBracketsPairsByNum(n - 1) + ')'
+//     }
+// }
+
+// return '(' + getBracketsPairsByNum(4) +')' = return '(' + getBracketsPairsByNum(3) +')' =(((())))
+// return '(' + getBracketsPairsByNum(3) +')'= return '(' + getBracketsPairsByNum(2) +')' = ((()))
+// return '(' + getBracketsPairsByNum(2) +')' = return '(' + getBracketsPairsByNum(1) +')' =(())
+// return '(' + getBracketsPairsByNum(1) +')'= return '(' + getBracketsPairsByNum(0) +')' =()
+
+// console.log(getBracketsPairsByNum(4))
+
+//дз РЕКУРСИИ
+// Написать функцию возведения числа в степень.
+// function pow2(x: number, n: number): number {
+//     if (n != 1) {
+//         return x *= pow2(x, n - 1)
+//     } else {
+//         return x
+//     }
+// }
+// console.log((pow2(2, 4)))
+
+// Написать функцию поиска наибольшего общего делителя.
+// function getLardestDivisor(a: number, b: number): number {
+//     if (b == 0)
+//         return a
+//     if (a > b)
+//         return getLardestDivisor(b, a % b)
+//     else
+//         return getLardestDivisor(a, b % a)
+// }
+// console.log(getLardestDivisor(4, 6))
+
+// // Написать функцию для поиска максимальной цифры в числе.
+// function getMinDigitInNum(a: number, b = 0): number {
+//     if (a % 10 > b) {
+//         b = a % 10
+//     }
+//     if (n > 10) {
+//         getMinDigitInNum(a / 10)
+//     }
+//     return b
+// }
+// console.log(getMinDigitInNum(348379))
+
+
+// Написать функцию, которая определяет простое ли пере-
+// данное число.
+// function isPrime(n: number, divisor = 2): boolean {
+//     if (n < 2) {
+//         return false;
+//     } else if (divisor >= Math.sqrt(n)) {
+//         return true;
+//     } else if (n % divisor === 0) {
+//         return false;
+//     } else {
+//         return isPrime(n, divisor + 1);
+//     }
+// }
+// console.log(isPrime(17))
+
+// Написать функцию для вывода всех множителей передан-
+// ного числа в возрастающем порядке.
+// Например: число 18 – множители 2 * 3 * 3
+
+
+
+// Написать функцию, которая возвращает число Фибоначчи
+// по переданному порядковому номеру.
+// Числа Фибоначчи: 1, 1, 2, 3, 5, 8, 13… Ряд основывается на
+// том, что каждое число равно сумме двух предыдущих чисел.
+// Например: порядковый номер 3 – число 2, порядковый
+// номер 6 – число 8
+// function getFibonacci(n: number): number {
+//     if (n == 1 && n == 2) {
+//         return 1
+//     } else {
+//         return getFibonacci(n - 1) + getFibonacci(n - 2)
+//     }
+// }
+// console.log(getFibonacci(10)) ОШИБКА
+
+//практика 6 ОБЬЕКТЫ
+
+// Создать объект, описывающий автомобиль (производитель,
+//     модель, год выпуска, средняя скорость), и следующие функции
+//     для работы с этим объектом.
+// type Car = {
+//     brand: string,
+//     model: number,
+//     year: number,
+//     speed: number
+// }
+
+// const car = {
+//     brand: 'porsche',
+//     model: 911,
+//     year: 2018,
+//     speed: 80
+// }
+
+// //     1 Функция для вывода на экран информации об автомобиле.
+// function showInfoAboutCar() {
+//     return car
+// }
+// console.log(showInfoAboutCar())
+
+// // 2 Функция для подсчета необходимого времени для пре-
+// //     одоления переданного расстояния со средней скоростью.
+// //     Учтите, что через каждые 4 часа дороги водителю необхо-
+// //     димо делать перерыв на 1 час.
+// function getTimeOfWay(S: number) {
+//     let time = S / car.speed
+//     time = Math.floor(time / 60)
+//     return time
+
+// }
+
+// console.log(getTimeOfWay(30))
+
+
+// // Создать объект, хранящий в себе отдельно числитель и знаменатель дроби, 
+// // и следующие функции для работы с этим объектом.
+// type Fraction = {
+//     numerator: number,
+//     denominator: number
+// }
+
+// const fraction1: Fraction = {
+//     numerator: 1,
+//     denominator: 2
+// }
+
+// const fraction2 = {
+//     numerator: 3,
+//     denominator: 10
+// } as Fraction
+
+// function transformToCommonDenominator(fr1: Fraction, fr2: Fraction) {
+//     return {
+//         fr1: {
+//             numerator: fr1.numerator * fr2.denominator,
+//             denominator: fr1.denominator * fr2.denominator
+//         },
+//         fr2: {
+//             numerator: fr2.numerator * fr1.denominator,
+//             denominator: fr1.denominator * fr2.denominator
+//         }
+//     }
+// }
+
+// 1 Функция сложения 2 - х объектов - дробей.
+
+// function getSumOfFractions(fr1: Fraction, fr2: Fraction) {
+//     const commonFractions = transformToCommonDenominator(fr1, fr2)
+//     return {
+//         numerator: commonFractions.fr1.numerator + commonFractions.fr2.numerator,
+//         denominator: commonFractions.fr1.denominator
+//     }
+// }
+
+// console.log(getSumOfFractions(fraction1, fraction2))
+
+// function getRedusedSumOfFractions(fr1: Fraction, fr2: Fraction) {
+//     const result = getSumOfFractions(fr1, fr2)
+//     return getReductedFraction(result)
+// }
+
+// console.log(getRedusedSumOfFractions(fraction1, fraction2))
+
+// // 2 Функция вычитания 2 - х объектов - дробей.
+
+// function getSubtrOfFractions(fr1: Fraction, fr2: Fraction) {
+//     const commonFractions = transformToCommonDenominator(fr1, fr2)
+//     const result = {
+//         numerator: commonFractions.fr1.numerator - commonFractions.fr2.numerator,
+//         denominator: commonFractions.fr1.denominator
+//     }
+//     return getReductedFraction(result)
+// }
+
+// console.log(getSubtrOfFractions(fraction1, fraction2))
+
+// 3 Функция умножения 2 - х объектов - дробей.
+
+// function getMulOfFractions(fr1: Fraction, fr2: Fraction) {
+//     const result = {
+//         numerator: fr1.numerator * fr2.numerator,
+//         denominator: fr1.denominator * fr2.denominator
+//     }
+//     return getReductedFraction(result)
+// }
+
+// console.log(getMulOfFractions(fraction1, fraction2))
+
+// 4 Функция деления 2 - х объектов - дробей.
+
+// function getDivOfFractions(fr1: Fraction, fr2: Fraction) {
+//     const result = {
+//         numerator: fr1.numerator * fr2.denominator,
+//         denominator: fr1.denominator * fr2.numerator
+//     }
+//     return getReductedFraction(result)
+// }
+
+// console.log(getDivOfFractions(fraction1, fraction2))
+
